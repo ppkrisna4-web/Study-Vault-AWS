@@ -80,6 +80,11 @@ terraform output
 2. Espera 30-60 segundos
 3. Descarga el archivo `.mp3` del bucket de salida
 
+## 📹 Video Demo
+
+[Ver demo completo en YouTube](https://www.youtube.com/watch?v=Dd0zPIKEfZI)
+
+
 ## 🛠️ Tecnologías
 
 - **Infrastructure as Code**: Terraform
