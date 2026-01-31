@@ -17,9 +17,12 @@ Study Vault es una aplicación serverless en AWS que convierte notas de texto en
 ### Problema que resuelve
 Las notas escritas no siempre son accesibles cuando estás en movimiento. Este proyecto permite estudiar mientras caminas, viajas o haces ejercicio.
 
+## 🎥 Demo Video
+
+[![Study Vault Demo](https://img.youtube.com/vi/Dd0zPIKEfZI/0.jpg)](https://youtu.be/Dd0zPIKEfZI)
+
+
 ## 🏗️ Arquitectura
-
-
 ```mermaid
 graph TD
     User[👤 User] -->|Upload .txt| S3Input[🗂️ Amazon S3<br/>Input Bucket]
@@ -79,11 +82,6 @@ terraform output
 1. Sube un archivo `.txt` al bucket de entrada
 2. Espera 30-60 segundos
 3. Descarga el archivo `.mp3` del bucket de salida
-
-## 📹 Video Demo
-
-[Ver demo completo en YouTube](https://www.youtube.com/watch?v=Dd0zPIKEfZI)
-
 
 ## 🛠️ Tecnologías
 
