@@ -1,19 +1,39 @@
 # 🎧 Study Vault - Text to Speech AWS Project
 
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
-![Terraform](https://img.shields.io/badge/Terraform-IaC-purple)
-![Python](https://img.shields.io/badge/Python-3.9-blue)
+![AWS](https://img.shields.io/badge/AWS-Serverless-orange?style=for-the-badge&logo=amazon-aws)
+![Amazon S3](https://img.shields.io/badge/Amazon_S3-Storage-success?style=for-the-badge&logo=amazon-s3)
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-Compute-yellow?style=for-the-badge&logo=aws-lambda)
+![Amazon Polly](https://img.shields.io/badge/Amazon_Polly-Text--to--Speech-blue?style=for-the-badge&logo=amazon-aws)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?style=for-the-badge&logo=terraform)
+![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python)
+![OS](https://img.shields.io/badge/OS-Windows_/_Linux-lightgrey?style=for-the-badge)
+
+
 
 ## 📋 Descripción
 
-Study Vault convierte tus notas de estudio en mini-podcasts que puedes escuchar en cualquier momento. Sube un archivo de texto con tus apuntes y recibe un archivo de audio generado automáticamente.
+Study Vault es una aplicación serverless en AWS que convierte notas de texto en audio usando Amazon Polly, permitiendo estudiar en movimiento mediante una arquitectura escalable y de bajo costo.
 
 ### Problema que resuelve
 Las notas escritas no siempre son accesibles cuando estás en movimiento. Este proyecto permite estudiar mientras caminas, viajas o haces ejercicio.
 
 ## 🏗️ Arquitectura
-```
-Usuario → S3 (input) → Lambda → Amazon Polly → S3 (output) → Usuario descarga MP3
+
+
+```mermaid
+graph TD
+    User[👤 User] -->|Upload .txt| S3Input[🗂️ Amazon S3<br/>Input Bucket]
+
+    S3Input -->|ObjectCreated Event| Lambda[⚙️ AWS Lambda<br/>Text to Speech]
+
+    Lambda -->|Text Request| Polly[🗣️ Amazon Polly]
+
+    Polly -->|MP3 Audio| Lambda
+
+    Lambda -->|Save .mp3| S3Output[🎧 Amazon S3<br/>Output Bucket]
+
+    S3Output -->|Download MP3| User
+
 ```
 
 **Servicios AWS utilizados:**
@@ -54,7 +74,7 @@ terraform apply
 terraform output
 ```
 
-## 📝 Cómo usar
+##  Cómo usar
 
 1. Sube un archivo `.txt` al bucket de entrada
 2. Espera 30-60 segundos
@@ -83,11 +103,15 @@ Este proyecto demuestra:
 - [ ] Soporte para múltiples idiomas
 - [ ] API REST para integración con otras apps
 
-## 👤 Autor
+##  Autor
 
-**Tu Nombre**
-- GitHub: [@AndresRJ18](https://github.com/AndresRJ18)
-- LinkedIn: [Andres Rodas](www.linkedin.com/in/andres-rodas-802309272)
+**Andrés Rodas**  
+Informatics Engineering Student – UPCH  
+
+☁️ Cloud Enthusiast  
+
+- 💼 **LinkedIn:** www.linkedin.com/in/andres-rodas-802309272 
+- 📧 **Email:** andrescloud18sj@gmail.com
 
 ## 📄 Licencia
 
